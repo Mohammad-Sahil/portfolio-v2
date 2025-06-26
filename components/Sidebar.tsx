@@ -26,7 +26,7 @@ const Sidebar = ({ display }) => {
                         </div>
                         <span className="pulse"></span>
                     </div>
-                    <p className={styles.profile_title}>Mohammad Sahil</p>
+                    <h1 className={styles.profile_title}>Mohammad Sahil<span style={{ display: "none" }}> Portfolio — Full Stack Developer</span></h1>
                     {/* <p>Full Stack Web Developer<br />Cloud Enthusiast</p> */}
                     <p>Flutter & Web App Innovator<br />Cloud & AI Enthusiast</p>
                 </div>
