@@ -3,11 +3,20 @@ import styless from '../styles/Home.module.css'
 import styles from '../styles/Blog.module.css'
 import Layout from '../components/Layout'
 import Blog from "../components/Blog"
+import Head from "next/head"
 
 export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>Blog | Mohammad Sahil — Thoughts on Code, Design & Innovation</title>
+        <meta
+          name="description"
+          content="Read my latest articles on full stack development, design practices, cloud integration, and lessons learned from real-world projects."
+        />
+      </Head>
+
       <Layout>
         <div className={styless.home_container_container} style={{ marginTop: "0" }}>
           <div className={styles.blog_container}>

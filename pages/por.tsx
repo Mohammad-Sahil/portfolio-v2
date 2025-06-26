@@ -8,12 +8,19 @@ import tbs from '../public/por/logo.jpg'
 import ecell from '../public/por/LOGO01.jpg'
 import vriddhi from '../public/por/vriddhi.jpg'
 import nitraa from '../public/por/nitraa.jpg'
+import Head from 'next/head'
 
 
 export default function Home() {
-
     return (
         <>
+            <Head>
+                <title>Positions of Responsibility | Mohammad Sahil — Leadership & Community Roles</title>
+                <meta
+                    name="description"
+                    content="Explore Mohammad Sahil's leadership, ambassador, and core team roles — from founding DevDribble to leading E-cell NITR, Postman, Angelhack, and more."
+                />
+            </Head>
             <Layout>
                 <div className={styless.home_container_container} style={{ marginTop: "0" }}>
                     <div className={styles.por_container}>

@@ -11,12 +11,20 @@ import nss from '../public/project/nss.png'
 import ebsbs from '../public/project/ebsb.png'
 import xpraints from '../public/project/xpraints.png'
 import aqg from '../public/project/aqg.png'
+import Head from 'next/head'
 
 
 export default function Home() {
 
    return (
       <>
+         <Head>
+            <title>Design | Mohammad Sahil — UI/UX and Creative Work</title>
+            <meta
+               name="description"
+               content="Explore my design work — thoughtful UI/UX, clean layouts, and pixel-perfect interfaces for mobile and web applications."
+            />
+         </Head>
          <Layout>
             <div className={styless.home_container_container} style={{ marginTop: "0" }}>
                <div className={styles.session_container}>

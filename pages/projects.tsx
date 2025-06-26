@@ -4,6 +4,7 @@ import styles from '../styles/Projects.module.css'
 import Layout from '../components/Layout'
 import Project from '../components/Project'
 import projectsArray from '../components/projectsArray.js'
+import Head from 'next/head'
 
 export default function Home() {
   const [category, setCategory] = useState('all');
@@ -15,6 +16,13 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>Projects | Mohammad Sahil — Full Stack Developer Portfolio</title>
+        <meta
+          name="description"
+          content="A showcase of my best projects — scalable dashboards, real-time web apps, mobile platforms, and cloud-powered solutions built using React, Next.js, Firebase, Flutter, and more."
+        />
+      </Head>
       <Layout>
         <div className={styless.home_container_container} style={{ marginTop: "0" }}>
           <div className={styles.project_container}>

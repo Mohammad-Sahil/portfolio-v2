@@ -5,6 +5,7 @@ import '../styles/globals.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import SplashScreen from '../components/SplashScreen';
 import * as gtag from '../lib/gtag';
+import SEO from '../components/SEO';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [showSplash, setShowSplash] = useState(false);
@@ -38,11 +39,10 @@ function MyApp({ Component, pageProps }: AppProps) {
     return null;
   }
 
-  if (showSplash) {
-    return <SplashScreen setShowSplash={setShowSplash} />;
-  }
-
-  return <Component {...pageProps} />;
+  return <>
+    <SEO />
+    {showSplash ? <SplashScreen setShowSplash={setShowSplash} /> : <Component {...pageProps} />}
+  </>;
 }
 
 export default MyApp;

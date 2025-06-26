@@ -2,12 +2,20 @@ import styless from '../styles/Home.module.css'
 import styles from '../styles/Stack.module.css'
 import Layout from '../components/Layout'
 import stacks from '../components/stack'
+import Head from 'next/head'
 
 
 export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>Stack | Mohammad Sahil — Tools, Technologies & Skills</title>
+        <meta
+          name="description"
+          content="Explore the full stack of technologies I use — React, Next.js, Node.js, Firebase, Flutter, AWS, GCP, TypeScript, and more."
+        />
+      </Head>
       <Layout>
         <div className={styless.home_container_container} style={{ marginTop: "0" }}>
           <div className={styles.stack_container}>

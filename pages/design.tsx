@@ -11,11 +11,19 @@ import teachers from '../public/DesignC/teachers.png'
 import rainbow from '../public/DesignC/rainbow.png'
 import smd from '../public/DesignC/smd.png'
 import nitraa from '../public/DesignC/nitraa.jpg'
+import Head from 'next/head'
 
 export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>Design | Mohammad Sahil — Logo & Poster Design</title>
+        <meta
+          name="description"
+          content="Explore my design work — thoughtful Logo & Poster Design, clean vector and pixel-perfect fantastic poster designs."
+        />
+      </Head>
       <Layout>
         <div className={styless.home_container_container} style={{ marginTop: "0" }}>
           <div className={styles.session_container}>

@@ -10,6 +10,7 @@ import { db } from '../components/firebase';
 import { collection, addDoc } from 'firebase/firestore';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Head from 'next/head';
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -83,6 +84,13 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>Contact | Mohammad Sahil — Let's Build Something</title>
+        <meta
+          name="description"
+          content="Interested in collaborating or hiring? Reach out to Mohammad Sahil for freelance or full-time development and design opportunities."
+        />
+      </Head>
       <Layout>
         <div className={styless.home_container_container} style={{ marginTop: "0" }}>
           <div className={styles.contact_container}>
