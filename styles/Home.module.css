@@ -75,7 +75,7 @@
 
 .home_button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(236, 72, 153, 0.4);
+  box-shadow: 0 8px 25px rgba(236, 72, 153, 0.4) !important;
 }
 
 .home_button:active {
