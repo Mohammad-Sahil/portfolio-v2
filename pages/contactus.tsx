@@ -85,7 +85,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Contact | Mohammad Sahil — Let's Build Something</title>
+        <title>Contact | Mohammad Sahil — Let&apos;s Build Something</title>
         <meta
           name="description"
           content="Interested in collaborating or hiring? Reach out to Mohammad Sahil for freelance or full-time development and design opportunities."
