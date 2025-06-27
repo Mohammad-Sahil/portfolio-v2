@@ -4,7 +4,7 @@
 </div>
 <hr/>
 
-This website is built using **Next.js**, **TypeScript**, **Chakra UI** and **EmotionJS**
+This website is built using **Next.js**, **TypeScript**, **MUI**, **EmotionJS** and **Firebase**.
 
 ## Local Setup Instructions :rocket:
 - fork and clone this repository
