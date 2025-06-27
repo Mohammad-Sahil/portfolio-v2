@@ -54,10 +54,10 @@ const Sidebar = ({ display }) => {
                     <Link href='https://leetcode.com/u/tsharpsahil/' className='text-decoration-none'>
                         <img src="leetcode.svg" alt="LeetCode" style={{ width: "14px", height: "14px", cursor: "pointer", color: "#94A3B8", marginLeft: "5px", marginRight: "5px" }} />
                     </Link>
-                    <Link href='https://tsharpsahil.medium.com/' className='text-decoration-none'><i className="fa fa-medium" style={{ cursor: "pointer", color: "#94A3B8" }} aria-hidden="true"></i></Link>
+                    <Link href='https://tsharpsahil.medium.com/' className='text-decoration-none'><i className="fab fa-medium" style={{ cursor: "pointer", color: "#94A3B8" }} aria-hidden="true"></i></Link>
                     <Link href='https://www.linkedin.com/in/tsharpsahilemeja/' className='text-decoration-none'><LinkedInIcon style={{ fontSize: "15px", cursor: "pointer", color: "#94A3B8", marginLeft: "5px", marginRight: "5px" }} /></Link>
                     <Link href='https://twitter.com/tsharpsahil' className='text-decoration-none'><TwitterIcon style={{ fontSize: "15px", cursor: "pointer", color: "#94A3B8", marginLeft: "5px", marginRight: "5px" }} /></Link>
-                    <Link href='https://www.behance.net/mohammadsahil2' className='text-decoration-none'><i className="fa fa-behance" style={{ cursor: "pointer", color: "#94A3B8" }} aria-hidden="true"></i></Link>
+                    <Link href='https://www.behance.net/mohammadsahil2' className='text-decoration-none'><i className="fab fa-behance" style={{ cursor: "pointer", color: "#94A3B8" }} aria-hidden="true"></i></Link>
                     <Link href='https://www.instagram.com/tsharpsahil/' className='text-decoration-none'><InstagramIcon style={{ fontSize: "15px", cursor: "pointer", color: "#94A3B8", marginLeft: "5px", marginRight: "5px" }} /></Link>
                     <Link href='https://www.facebook.com/sahil87654/' className='text-decoration-none'><FacebookIcon style={{ fontSize: "15px", cursor: "pointer", color: "#94A3B8", marginLeft: "5px", marginRight: "5px" }} /></Link>
                 </div>

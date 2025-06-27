@@ -7,6 +7,7 @@ import MenuOpenIcon from '@mui/icons-material/MenuOpen'
 import MoreVertIcon from '@mui/icons-material/MoreVert'
 import { IconButton } from '@material-ui/core'
 import Chat from './Chat';
+import Link from 'next/link';
 
 const Layout = ({ children }) => {
   const [sidebarD, setSidebarD] = useState("none");
@@ -18,6 +19,7 @@ const Layout = ({ children }) => {
         <div className={styles.layout_margin}>
           <div className={styles.layout_topbar}>
             <IconButton onClick={() => setSidebarD(prev => (prev === "none" ? "block" : "none"))} style={{ color: "white" }}><MoreVertIcon style={{ marginLeft: "18px", fontSize: "28px" }} /></IconButton>
+            <Link href="/" className="text-decoration-none"><span className={styles.layout_topbar_text}>MS </span></Link>
             <IconButton onClick={() => setNavbarD(prev => (prev === "none" ? "block" : "none"))} style={{ color: "white", marginRight: 0, marginLeft: "auto" }}><MenuOpenIcon style={{ marginLeft: "auto", marginRight: "18px", fontSize: "28px" }} /></IconButton>
           </div>
           <div className="layout_margin_container d-flex" style={{ borderRadius: "0.6rem", overflow: "hidden" }}>

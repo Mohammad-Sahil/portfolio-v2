@@ -13,6 +13,10 @@ export default function Document() {
                     referrerPolicy="no-referrer"
                 />
                 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+                    rel="stylesheet"
+                />
                 {/* Google Analytics */}
                 <script
                     async

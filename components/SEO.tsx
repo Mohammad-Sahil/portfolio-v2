@@ -17,6 +17,7 @@ export default function SEO({ title = defaultTitle, description = defaultDescrip
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta httpEquiv="x-ua-compatible" content="IE=edge" />
                 <link rel="icon" href="/favicon.ico" />
+                <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
                 {/* *********** Primary Meta Tags *********** */}
                 <meta name="title" content="Mohammad Sahil | Full Stack Developer Portfolio" />
@@ -30,8 +31,9 @@ export default function SEO({ title = defaultTitle, description = defaultDescrip
                 <meta property="og:title" content="Mohammad Sahil | Full Stack Developer Portfolio" />
                 <meta property="og:description" content="Experienced in React, Next.js, Firebase, Flutter & more — building scalable web and mobile platforms." />
                 <meta property="og:image" content="https://tsharpsahil.vercel.app/waimg.png" />
-                <meta property="og:image:width" content="806" />
-                <meta property="og:image:height" content="280" />
+                <meta property="og:image:width" content="1920" />
+                <meta property="og:image:height" content="1080" />
+                <meta property="og:image:type" content="image/png" />
 
                 {/* *********** Twitter Card *********** */}
                 <meta name="twitter:card" content="summary_large_image" />

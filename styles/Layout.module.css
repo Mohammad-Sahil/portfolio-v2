@@ -96,4 +96,36 @@
     color: #9C9CA2;
     align-items: center;
   }
+
+  .layout_topbar_text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 22px;
+    font-weight: 800;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(45deg, #ec4899, #8b5cf6, #ec4899, #8b5cf6);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientRotate 3s ease-in-out infinite;
+  }
+
+  @keyframes gradientRotate {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
 }

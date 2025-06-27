@@ -180,13 +180,18 @@ a {
   .home_footer {
     margin-top: 30px;
     font-size: 14px !important;
-    margin-bottom: 40px;
+    margin-bottom: 55px;
     display: flex;
     justify-content: center;
   }
 
   .page_title {
     font-size: 26px !important;
+  }
+
+  .layout_margin_container {
+    border-radius: 0 !important;
+    box-shadow: none !important;
   }
 }
 
