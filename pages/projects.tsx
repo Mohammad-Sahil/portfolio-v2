@@ -7,34 +7,44 @@ import projectsArray from '../components/projectsArray.js'
 import Head from 'next/head'
 
 export default function Home() {
-  const [category, setCategory] = useState('all');
+  const [category, setCategory] = useState('all')
 
   // Filter projects based on selected category
-  const filteredProjects = category === 'all'
-    ? projectsArray
-    : projectsArray.filter(project => project.cat === category);
+  const filteredProjects =
+    category === 'all'
+      ? projectsArray
+      : projectsArray.filter((project) => project.cat === category)
 
   return (
     <>
       <Head>
-        <title>Projects | Mohammad Sahil — Full Stack Developer Portfolio</title>
+        <title>
+          Projects | Mohammad Sahil — Full Stack Developer Portfolio
+        </title>
         <meta
           name="description"
           content="A showcase of my best projects — scalable dashboards, real-time web apps, mobile platforms, and cloud-powered solutions built using React, Next.js, Firebase, Flutter, and more."
         />
       </Head>
       <Layout>
-        <div className={styless.home_container_container} style={{ marginTop: "0" }}>
+        <div
+          className={styless.home_container_container}
+          style={{ marginTop: '0' }}
+        >
           <div className={styles.project_container}>
-            <div className={styles.project_header} style={{ marginBottom: "1rem" }}>
+            <div
+              className={styles.project_header}
+              style={{ marginBottom: '1rem' }}
+            >
               <div className="row w-100 align-items-center">
                 <div className="col-12 col-md-6 text-start">
-                  <h2 className="page_title mb-md-0">
-                    Featured Projects
-                  </h2>
+                  <h2 className="page_title mb-md-0">Featured Projects</h2>
                 </div>
                 <div className="col-12 col-md-6 text-md-end px-0">
-                  <div className={styles.category_buttons} style={{ float: "right" }}>
+                  <div
+                    className={styles.category_buttons}
+                    style={{ float: 'right' }}
+                  >
                     <button
                       className={`${styles.category_btn} ${category === 'all' ? styles.active : ''}`}
                       onClick={() => setCategory('all')}
@@ -78,7 +88,9 @@ export default function Home() {
             })}
 
             <div className="home_footer">
-              <p>Made with 💜 By Mohammad Sahil | © {new Date().getFullYear()}</p>
+              <p>
+                Made with 💜 By Mohammad Sahil | © {new Date().getFullYear()}
+              </p>
               <p>Email: sahilmejakhas@gmail.com</p>
             </div>
           </div>

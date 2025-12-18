@@ -14,7 +14,6 @@ import nitraa from '../public/DesignC/nitraa.jpg'
 import Head from 'next/head'
 
 export default function Home() {
-
   return (
     <>
       <Head>
@@ -25,7 +24,10 @@ export default function Home() {
         />
       </Head>
       <Layout>
-        <div className={styless.home_container_container} style={{ marginTop: "0" }}>
+        <div
+          className={styless.home_container_container}
+          style={{ marginTop: '0' }}
+        >
           <div className={styles.session_container}>
             <h2>Featured Designs</h2>
 
@@ -70,7 +72,9 @@ export default function Home() {
               linkB="#"
             />
             <div className="home_footer">
-              <p>Made with 💜 By Mohammad Sahil | © {new Date().getFullYear()}</p>
+              <p>
+                Made with 💜 By Mohammad Sahil | © {new Date().getFullYear()}
+              </p>
               <p>Email: sahilmejakhas@gmail.com</p>
             </div>
           </div>

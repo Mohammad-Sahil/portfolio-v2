@@ -4,9 +4,7 @@ import Layout from '../components/Layout'
 import WorkExperience from '../components/WorkExperience'
 import Head from 'next/head'
 
-
 export default function Experience() {
-
   return (
     <>
       <Head>
@@ -17,12 +15,17 @@ export default function Experience() {
         />
       </Head>
       <Layout>
-        <div className={styless.home_container_container} style={{ marginTop: "0" }}>
+        <div
+          className={styless.home_container_container}
+          style={{ marginTop: '0' }}
+        >
           <div className={styles.session_container}>
             <h2>Work Experience</h2>
             <WorkExperience />
             <div className="home_footer">
-              <p>Made with 💜 By Mohammad Sahil | © {new Date().getFullYear()}</p>
+              <p>
+                Made with 💜 By Mohammad Sahil | © {new Date().getFullYear()}
+              </p>
               <p>Email: sahilmejakhas@gmail.com</p>
             </div>
           </div>

@@ -19,7 +19,7 @@
   border-radius: 0.75rem;
 }
 
-.home_banner>div {
+.home_banner > div {
   /* background-color: red; */
   width: 100%;
 }
@@ -29,11 +29,12 @@
   font-size: 3rem;
   line-height: 50px;
   font-weight: 900;
-  font-family: Mark Pro, sans-serif;
+  font-family:
+    Mark Pro,
+    sans-serif;
 }
 
-
-.home_banner h2>span {
+.home_banner h2 > span {
   font-size: 3rem;
   line-height: 50px;
   font-weight: 900;
@@ -51,11 +52,13 @@
   background: linear-gradient(45deg, #ec4899, #8b5cf6, #ec4899, #8b5cf6);
   background-size: 400% 400%;
   border-radius: 0.5rem !important;
-  border: 2px solid #AA1EF1;
+  border: 2px solid #aa1ef1;
   color: white;
   font-weight: 600;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
   animation: gradientRotate 3s ease-in-out infinite;
 }
 
@@ -100,7 +103,7 @@
 .home_banner .ask_how {
   font-size: 17.3431px;
   letter-spacing: 0.180657px;
-  color: #C084FC;
+  color: #c084fc;
   font-weight: 500;
 }
 
@@ -108,8 +111,10 @@
   margin: 17px 0;
   font-size: 17.3431px;
   line-height: 24px;
-  color: #94A3B8 !important;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  color: #94a3b8 !important;
+  font-family:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+    'Courier New', monospace;
   display: flex;
 }
 
@@ -118,7 +123,6 @@
   font-size: 17.3431px;
   line-height: 24px;
   color: #d1d5dbe1;
-
 }
 
 .text1 {
@@ -148,7 +152,7 @@
   font-size: 30px;
   line-height: 36px;
   /* color: #9C9CA2; */
-  color: #94A3B8;
+  color: #94a3b8;
   padding: 10px 3px 12px 3px;
   position: relative;
 }
@@ -167,9 +171,9 @@
 .interest_div {
   width: 100%;
   /* background: linear-gradient(95.32deg, #252532 0%, #242430 100%); */
-  background: #1E293B;
+  background: #1e293b;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
-  color: #9C9CA2;
+  color: #9c9ca2;
   display: flex;
   align-items: center;
   border-radius: 0.75rem;
@@ -177,7 +181,6 @@
 
 .interest_div:hover {
   color: #ffffff;
-
 }
 
 .interest_div_icon {
@@ -226,13 +229,13 @@
   margin-right: 0;
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .home_banner {
     padding: 60px 30px;
     min-height: 380px;
   }
 
-  .home_banner>div {
+  .home_banner > div {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -277,7 +280,7 @@
     font-size: 24px;
   }
 
-  .home_interest>div>div>div {
+  .home_interest > div > div > div {
     padding: 10px 16px !important;
   }
 }

@@ -20,85 +20,85 @@ import {
   ContactMailOutlined,
   ContactMail,
   SchoolOutlined,
-  School
-} from '@mui/icons-material';
+  School,
+} from '@mui/icons-material'
 
-
-import NavigationItem from './NavigationItem';
+import NavigationItem from './NavigationItem'
 
 const Navbar = ({ display }) => {
-  const linkStyle = "text-decoration-none d-flex justify-content-center flex-column";
-  const aStyle = "text-decoration-none mx-auto d-flex flex-column justify-content-center";
+  const linkStyle =
+    'text-decoration-none d-flex justify-content-center flex-column'
+  const aStyle =
+    'text-decoration-none mx-auto d-flex flex-column justify-content-center'
 
   // Navigation items array
   const navigationItems = [
     {
-      route: "/",
-      text: "Home",
+      route: '/',
+      text: 'Home',
       icon: HomeOutlined,
-      iconFilled: Home
+      iconFilled: Home,
     },
     {
-      route: "/projects",
-      text: "Projects",
+      route: '/projects',
+      text: 'Projects',
       icon: AccountTreeOutlined,
-      iconFilled: AccountTree
+      iconFilled: AccountTree,
     },
     {
-      route: "/experience",
-      text: "Experience",
+      route: '/experience',
+      text: 'Experience',
       icon: WorkOutlineOutlined,
-      iconFilled: Work
+      iconFilled: Work,
     },
     {
-      route: "/stack",
-      text: "Stack",
+      route: '/stack',
+      text: 'Stack',
       icon: DataObjectOutlined,
-      iconFilled: DataObject
+      iconFilled: DataObject,
     },
     {
-      route: "/blog",
-      text: "Blog",
+      route: '/blog',
+      text: 'Blog',
       icon: RssFeedOutlined,
-      iconFilled: RssFeed
+      iconFilled: RssFeed,
     },
     {
-      route: "/por",
-      text: "POR",
+      route: '/por',
+      text: 'POR',
       icon: SupervisorAccountOutlined,
-      iconFilled: SupervisorAccount
+      iconFilled: SupervisorAccount,
     },
     {
-      route: "/uiux",
-      text: "UI/UX",
+      route: '/uiux',
+      text: 'UI/UX',
       icon: DesignServicesOutlined,
-      iconFilled: DesignServices
+      iconFilled: DesignServices,
     },
     {
-      route: "/design",
-      text: "Design",
+      route: '/design',
+      text: 'Design',
       icon: PaletteOutlined,
-      iconFilled: Palette
+      iconFilled: Palette,
     },
     {
-      route: "/contactus",
-      text: "Contact",
+      route: '/contactus',
+      text: 'Contact',
       icon: ContactMailOutlined,
-      iconFilled: ContactMail
+      iconFilled: ContactMail,
     },
     {
-      route: "/session",
-      text: "Sessions",
+      route: '/session',
+      text: 'Sessions',
       icon: SchoolOutlined,
-      iconFilled: School
-    }
-  ];
-
+      iconFilled: School,
+    },
+  ]
 
   return (
     <div className={styles.navbar_container} style={{ display: display }}>
       <div className={styles.nav_menu}>
-        <ul className='p-0'>
+        <ul className="p-0">
           {navigationItems.map((item, index) => {
             return (
               <NavigationItem
@@ -108,8 +108,7 @@ const Navbar = ({ display }) => {
                 linkStyle={linkStyle}
                 aStyle={aStyle}
               />
-
-            );
+            )
           })}
         </ul>
       </div>

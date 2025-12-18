@@ -1,16 +1,17 @@
-import Button from "@mui/material/Button"
+import Button from '@mui/material/Button'
 import styless from '../styles/Home.module.css'
 import styles from '../styles/Blog.module.css'
 import Layout from '../components/Layout'
-import Blog from "../components/Blog"
-import Head from "next/head"
+import Blog from '../components/Blog'
+import Head from 'next/head'
 
 export default function Home() {
-
   return (
     <>
       <Head>
-        <title>Blog | Mohammad Sahil — Thoughts on Code, Design & Innovation</title>
+        <title>
+          Blog | Mohammad Sahil — Thoughts on Code, Design & Innovation
+        </title>
         <meta
           name="description"
           content="Read my latest articles on full stack development, design practices, cloud integration, and lessons learned from real-world projects."
@@ -18,7 +19,10 @@ export default function Home() {
       </Head>
 
       <Layout>
-        <div className={styless.home_container_container} style={{ marginTop: "0" }}>
+        <div
+          className={styless.home_container_container}
+          style={{ marginTop: '0' }}
+        >
           <div className={styles.blog_container}>
             <h2>Latest Blogs</h2>
             <div className="blog_container_blog">
@@ -47,11 +51,12 @@ export default function Home() {
                   para="When working as a student on a project, you might have come across the word “DevOps”, right? According to a recent…"
                   title="An introduction to DevOps"
                 />
-
               </div>
             </div>
             <div className="home_footer">
-              <p>Made with 💜 By Mohammad Sahil | © {new Date().getFullYear()}</p>
+              <p>
+                Made with 💜 By Mohammad Sahil | © {new Date().getFullYear()}
+              </p>
               <p>Email: sahilmejakhas@gmail.com</p>
             </div>
           </div>

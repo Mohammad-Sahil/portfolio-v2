@@ -2,8 +2,18 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica Neue,
+    sans-serif;
 }
 
 a {
@@ -43,20 +53,20 @@ a {
 }
 
 .CircularProgressbar .CircularProgressbar-trail {
-  stroke: #8C8C8E;
+  stroke: #8c8c8e;
   /* Used when trail is not full diameter, i.e. when props.circleRatio is set */
   stroke-linecap: round;
 }
 
 .CircularProgressbar .CircularProgressbar-text {
-  fill: #8C8C8E;
+  fill: #8c8c8e;
   font-size: 20px;
   dominant-baseline: middle;
   text-anchor: middle;
 }
 
 .CircularProgressbar .CircularProgressbar-background {
-  fill: #A756E6;
+  fill: #a756e6;
 }
 
 /*
@@ -68,8 +78,9 @@ a {
  *     percentage={50}
  *   />
  */
-.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-background {
-  fill: #A756E6;
+.CircularProgressbar.CircularProgressbar-inverted
+  .CircularProgressbar-background {
+  fill: #a756e6;
 }
 
 .CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-text {
@@ -84,18 +95,17 @@ a {
   stroke: transparent;
 }
 
-
 .home_footer {
   padding: 17px 20px;
-  color: #94A3B8;
+  color: #94a3b8;
   display: flex;
   align-items: center;
-  background: #1E293B;
+  background: #1e293b;
   background-color: #1e293b;
   margin: 50px -25px 0 -25px;
   padding-left: 25px;
   padding-right: 25px;
-  border-top: 1px solid #38384A;
+  border-top: 1px solid #38384a;
 }
 
 .home_footer p {
@@ -114,40 +124,40 @@ a {
   padding: 17px;
   background: linear-gradient(to bottom right, #1e293b, #1e293b, #0f172a);
   border-radius: 4.5px;
-  color: #94A3B8;
+  color: #94a3b8;
   min-height: 426px;
 }
 
-.blog_container_blog_card>img {
+.blog_container_blog_card > img {
   width: 100%;
   border-radius: 9px;
   height: 140px;
 }
 
-.blog_container_blog_card>h3 {
+.blog_container_blog_card > h3 {
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-top: 14px;
 }
 
-.blog_container_blog_card>p {
+.blog_container_blog_card > p {
   font-size: 17px;
   line-height: 23px;
-  color: #94A3B8;
+  color: #94a3b8;
 }
 
-.blog_container_blog_card>a {
-  color: #94A3B8;
+.blog_container_blog_card > a {
+  color: #94a3b8;
 }
 
-.blog_container_blog_card>a:hover {
-  color: #94A3B8;
+.blog_container_blog_card > a:hover {
+  color: #94a3b8;
 }
 
-.blog_container_blog_card>a:hover .buttons_blogCard {
-  color: #94A3B8;
+.blog_container_blog_card > a:hover .buttons_blogCard {
+  color: #94a3b8;
   background-color: #0000000c;
 }
 
@@ -168,7 +178,7 @@ a {
   background-color: #222e41;
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .home_footer p:nth-child(2) {
     display: none;
   }
@@ -209,12 +219,16 @@ a {
   background-position: center;
   grid-column: 1 / 7;
   grid-row: 1 / 9;
-  border-radius: .75rem;
+  border-radius: 0.75rem;
 }
 
 .grid--content {
-  background: linear-gradient(to bottom right, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.8));
-  border-radius: .75rem;
+  background: linear-gradient(
+    to bottom right,
+    rgba(30, 41, 59, 0.9),
+    rgba(15, 23, 42, 0.8)
+  );
+  border-radius: 0.75rem;
   color: white;
   grid-column: 6 / -1;
   grid-row: 4 / -1;
@@ -228,7 +242,7 @@ a {
   font-family: 'Blinker', sans-serif;
   font-weight: 800;
   font-size: 30px;
-  color: #94A3B8;
+  color: #94a3b8;
 }
 
 .btn_button {
@@ -241,7 +255,9 @@ a {
   color: white;
   font-weight: 600;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .btn_button:hover {
@@ -285,7 +301,7 @@ a {
 
 @media (max-width: 768px) {
   .grid--image {
-    grid-column: 1 / -1
+    grid-column: 1 / -1;
   }
 
   .grid--content {
@@ -316,15 +332,22 @@ a {
 
 /******** DesignC Styling ******* */
 
-
 figure.effect-sadie figcaption::before {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: -webkit-linear-gradient(to bottom, rgb(72 76 97 / 91%) 0%, rgba(72, 76, 97, 0.8) 75%);
-  background: linear-gradient(to bottom, rgb(72 76 97 / 91%) 0%, rgba(72, 76, 97, 0.8) 75%);
+  background: -webkit-linear-gradient(
+    to bottom,
+    rgb(72 76 97 / 91%) 0%,
+    rgba(72, 76, 97, 0.8) 75%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgb(72 76 97 / 91%) 0%,
+    rgba(72, 76, 97, 0.8) 75%
+  );
   content: '';
   opacity: 0;
   -webkit-transform: translate3d(0, 50%, 0);
@@ -337,16 +360,24 @@ figure.effect-sadie h2 {
   left: 0;
   width: 100%;
   color: #484c61;
-  -webkit-transition: -webkit-transform 0.35s, color 0.35s;
-  transition: transform 0.35s, color 0.35s;
+  -webkit-transition:
+    -webkit-transform 0.35s,
+    color 0.35s;
+  transition:
+    transform 0.35s,
+    color 0.35s;
   -webkit-transform: translate3d(0, -50%, 0);
   transform: translate3d(0, -50%, 0);
 }
 
 figure.effect-sadie figcaption::before,
 figure.effect-sadie p {
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transition:
+    opacity 0.35s,
+    -webkit-transform 0.35s;
+  transition:
+    opacity 0.35s,
+    transform 0.35s;
 }
 
 figure.effect-sadie p {
@@ -377,7 +408,6 @@ figure.effect-sadie:hover p {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-
 
 .grid {
   position: relative;
@@ -425,7 +455,7 @@ figure.effect-sadie:hover p {
 }
 
 .grid figure figcaption,
-.grid figure figcaption>a {
+.grid figure figcaption > a {
   position: absolute;
   top: 0;
   left: 0;
@@ -435,7 +465,7 @@ figure.effect-sadie:hover p {
 
 /* Anchor will cover the whole item by default */
 /* For some effects it will show as a button */
-.grid figure figcaption>a {
+.grid figure figcaption > a {
   z-index: 1000;
   text-indent: 200%;
   white-space: nowrap;

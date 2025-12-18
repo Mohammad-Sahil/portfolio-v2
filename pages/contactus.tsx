@@ -1,86 +1,86 @@
-import { useState } from 'react';
-import Button from "@mui/material/Button";
-import styless from '../styles/Home.module.css';
-import styles from '../styles/Contact.module.css';
-import Layout from '../components/Layout';
-import PersonIcon from '@mui/icons-material/Person';
-import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
-import MailOutlineIcon from '@mui/icons-material/MailOutline';
-import { db } from '../components/firebase';
-import { collection, addDoc } from 'firebase/firestore';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import Head from 'next/head';
+import { useState } from 'react'
+import Button from '@mui/material/Button'
+import styless from '../styles/Home.module.css'
+import styles from '../styles/Contact.module.css'
+import Layout from '../components/Layout'
+import PersonIcon from '@mui/icons-material/Person'
+import AlternateEmailIcon from '@mui/icons-material/AlternateEmail'
+import MailOutlineIcon from '@mui/icons-material/MailOutline'
+import { db } from '../components/firebase'
+import { collection, addDoc } from 'firebase/firestore'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import Head from 'next/head'
 
 export default function Home() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''
-  });
+    message: '',
+  })
 
   interface FormData {
-    name: string;
-    email: string;
-    message: string;
+    name: string
+    email: string
+    message: string
   }
 
   interface ChangeEvent {
     target: {
-      id: string;
-      value: string;
-    };
+      id: string
+      value: string
+    }
   }
 
   const handleChange = (e: ChangeEvent): void => {
-    const { id, value } = e.target;
+    const { id, value } = e.target
     setFormData((prev: FormData) => ({
       ...prev,
-      [id === 'name' ? 'name' :
-        id === 'email' ? 'email' : 'message']: value
-    }));
-  };
+      [id === 'name' ? 'name' : id === 'email' ? 'email' : 'message']: value,
+    }))
+  }
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>): Promise<void> => {
-    e.preventDefault();
+  const handleSubmit = async (
+    e: React.FormEvent<HTMLFormElement>
+  ): Promise<void> => {
+    e.preventDefault()
 
     try {
       // Add timestamp to the data
       const dataToSubmit = {
         ...formData,
-        timestamp: new Date()
-      };
+        timestamp: new Date(),
+      }
 
       // Add document to Firestore
-      await addDoc(collection(db, "contactus"), dataToSubmit);
+      await addDoc(collection(db, 'contactus'), dataToSubmit)
 
       // Show success toast
-      toast.success("Message sent successfully!", {
-        position: "top-right",
+      toast.success('Message sent successfully!', {
+        position: 'top-right',
         autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
-        draggable: true
-      });
+        draggable: true,
+      })
 
       // Reset form
-      setFormData({ name: '', email: '', message: '' });
-
+      setFormData({ name: '', email: '', message: '' })
     } catch (error) {
       // Show error toast
-      toast.error("Failed to send message. Please try again.", {
-        position: "top-right",
+      toast.error('Failed to send message. Please try again.', {
+        position: 'top-right',
         autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
-        draggable: true
-      });
+        draggable: true,
+      })
 
-      console.error("Error adding document: ", error);
+      console.error('Error adding document: ', error)
     }
-  };
+  }
 
   return (
     <>
@@ -92,14 +92,19 @@ export default function Home() {
         />
       </Head>
       <Layout>
-        <div className={styless.home_container_container} style={{ marginTop: "0" }}>
+        <div
+          className={styless.home_container_container}
+          style={{ marginTop: '0' }}
+        >
           <div className={styles.contact_container}>
             <h2>Get in touch</h2>
             <div>
               <div className={styles.contact_container_div}>
                 <form className="px-5 py-4" onSubmit={handleSubmit}>
                   <div className="form-group">
-                    <label htmlFor="name"><PersonIcon /></label>
+                    <label htmlFor="name">
+                      <PersonIcon />
+                    </label>
                     <input
                       type="text"
                       className="form-control"
@@ -112,7 +117,9 @@ export default function Home() {
                     />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="email"><AlternateEmailIcon /></label>
+                    <label htmlFor="email">
+                      <AlternateEmailIcon />
+                    </label>
                     <input
                       type="email"
                       className="form-control"
@@ -125,7 +132,9 @@ export default function Home() {
                     />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="message"><MailOutlineIcon /></label>
+                    <label htmlFor="message">
+                      <MailOutlineIcon />
+                    </label>
                     <textarea
                       className="form-control"
                       id="message"
@@ -148,7 +157,9 @@ export default function Home() {
               </div>
             </div>
             <div className="home_footer">
-              <p>Made with 💜 By Mohammad Sahil | © {new Date().getFullYear()}</p>
+              <p>
+                Made with 💜 By Mohammad Sahil | © {new Date().getFullYear()}
+              </p>
               <p>Email: sahilmejakhas@gmail.com</p>
             </div>
           </div>
@@ -158,5 +169,5 @@ export default function Home() {
       {/* Toast container for notifications */}
       <ToastContainer />
     </>
-  );
+  )
 }

@@ -7,6 +7,7 @@
 This website is built using **Next.js**, **TypeScript**, **MUI**, **EmotionJS** and **Firebase**.
 
 ## Local Setup Instructions :rocket:
+
 - fork and clone this repository
 - cd into **portfolio** (`cd portfolio`)
 - run `yarn install` or `npm install`

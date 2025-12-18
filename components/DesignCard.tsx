@@ -1,72 +1,72 @@
-import React, { useState } from 'react';
-import Router from 'next/router';
-import zIndex from '@mui/material/styles/zIndex';
+import React, { useState } from 'react'
+import Router from 'next/router'
+import zIndex from '@mui/material/styles/zIndex'
 
 interface DesignCardProps {
-  cardImg: string;
-  title: string;
-  para: string;
-  figmaLink: string;
+  cardImg: string
+  title: string
+  para: string
+  figmaLink: string
 }
 
 const DesignCard: React.FC<DesignCardProps> = (props) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [zoomLevel, setZoomLevel] = useState(1);
-  const [isDragging, setIsDragging] = useState(false);
-  const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
-  const [imagePosition, setImagePosition] = useState({ x: 0, y: 0 });
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [zoomLevel, setZoomLevel] = useState(1)
+  const [isDragging, setIsDragging] = useState(false)
+  const [dragStart, setDragStart] = useState({ x: 0, y: 0 })
+  const [imagePosition, setImagePosition] = useState({ x: 0, y: 0 })
 
   const openModal = () => {
-    setIsModalOpen(true);
-    setZoomLevel(1);
-    setImagePosition({ x: 0, y: 0 });
-  };
+    setIsModalOpen(true)
+    setZoomLevel(1)
+    setImagePosition({ x: 0, y: 0 })
+  }
 
   const closeModal = () => {
-    setIsModalOpen(false);
-    setZoomLevel(1);
-    setImagePosition({ x: 0, y: 0 });
-  };
+    setIsModalOpen(false)
+    setZoomLevel(1)
+    setImagePosition({ x: 0, y: 0 })
+  }
 
   const handleZoomIn = () => {
-    setZoomLevel(prev => Math.min(prev + 0.5, 4));
-  };
+    setZoomLevel((prev) => Math.min(prev + 0.5, 4))
+  }
 
   const handleZoomOut = () => {
-    setZoomLevel(prev => Math.max(prev - 0.5, 0.5));
-  };
+    setZoomLevel((prev) => Math.max(prev - 0.5, 0.5))
+  }
 
   const handleMouseDown = (e: React.MouseEvent) => {
     if (zoomLevel > 1) {
-      setIsDragging(true);
+      setIsDragging(true)
       setDragStart({
         x: e.clientX - imagePosition.x,
-        y: e.clientY - imagePosition.y
-      });
+        y: e.clientY - imagePosition.y,
+      })
     }
-  };
+  }
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (isDragging && zoomLevel > 1) {
       setImagePosition({
         x: e.clientX - dragStart.x,
-        y: e.clientY - dragStart.y
-      });
+        y: e.clientY - dragStart.y,
+      })
     }
-  };
+  }
 
   const handleMouseUp = () => {
-    setIsDragging(false);
-  };
+    setIsDragging(false)
+  }
 
   const handleWheel = (e: React.WheelEvent) => {
-    e.preventDefault();
+    e.preventDefault()
     if (e.deltaY < 0) {
-      handleZoomIn();
+      handleZoomIn()
     } else {
-      handleZoomOut();
+      handleZoomOut()
     }
-  };
+  }
 
   const modalOverlayStyle = {
     position: 'fixed' as const,
@@ -81,9 +81,11 @@ const DesignCard: React.FC<DesignCardProps> = (props) => {
     zIndex: 9999,
     backdropFilter: 'blur(8px)',
     opacity: isModalOpen ? 1 : 0,
-    visibility: isModalOpen ? ('visible' as React.CSSProperties['visibility']) : ('hidden' as React.CSSProperties['visibility']),
-    transition: 'all 0.3s ease'
-  };
+    visibility: isModalOpen
+      ? ('visible' as React.CSSProperties['visibility'])
+      : ('hidden' as React.CSSProperties['visibility']),
+    transition: 'all 0.3s ease',
+  }
 
   const modalContentStyle = {
     position: 'relative' as const,
@@ -91,8 +93,8 @@ const DesignCard: React.FC<DesignCardProps> = (props) => {
     maxHeight: '95vh',
     overflow: 'hidden',
     borderRadius: '12px',
-    boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)'
-  };
+    boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+  }
 
   const modalImageStyle = {
     display: 'block',
@@ -102,8 +104,8 @@ const DesignCard: React.FC<DesignCardProps> = (props) => {
     height: 'auto',
     transform: `scale(${zoomLevel}) translate(${imagePosition.x / zoomLevel}px, ${imagePosition.y / zoomLevel}px)`,
     transition: isDragging ? 'none' : 'transform 0.3s ease',
-    cursor: zoomLevel > 1 ? (isDragging ? 'grabbing' : 'grab') : 'zoom-in'
-  };
+    cursor: zoomLevel > 1 ? (isDragging ? 'grabbing' : 'grab') : 'zoom-in',
+  }
 
   const closeButtonStyle = {
     position: 'absolute' as const,
@@ -123,8 +125,8 @@ const DesignCard: React.FC<DesignCardProps> = (props) => {
     fontWeight: 'bold',
     transition: 'all 0.3s ease',
     backdropFilter: 'blur(10px)',
-    zIndex: 10001
-  };
+    zIndex: 10001,
+  }
 
   const zoomControlsStyle = {
     position: 'absolute' as const,
@@ -137,8 +139,8 @@ const DesignCard: React.FC<DesignCardProps> = (props) => {
     padding: '12px 20px',
     borderRadius: '25px',
     backdropFilter: 'blur(10px)',
-    zIndex: 10001
-  };
+    zIndex: 10001,
+  }
 
   const zoomButtonStyle = {
     background: 'rgba(255, 255, 255, 0.2)',
@@ -153,8 +155,8 @@ const DesignCard: React.FC<DesignCardProps> = (props) => {
     cursor: 'pointer',
     fontSize: '18px',
     fontWeight: 'bold',
-    transition: 'all 0.3s ease'
-  };
+    transition: 'all 0.3s ease',
+  }
 
   const zoomInfoStyle = {
     color: 'white',
@@ -163,15 +165,15 @@ const DesignCard: React.FC<DesignCardProps> = (props) => {
     display: 'flex',
     alignItems: 'center',
     minWidth: '60px',
-    justifyContent: 'center'
-  };
+    justifyContent: 'center',
+  }
 
   const gridImageStyle = {
     backgroundImage: `url(${props.cardImg})`,
     cursor: 'pointer',
     transition: 'all 0.3s ease',
-    position: 'relative' as const
-  };
+    position: 'relative' as const,
+  }
 
   const imageOverlayStyle = {
     position: 'absolute' as const,
@@ -190,7 +192,7 @@ const DesignCard: React.FC<DesignCardProps> = (props) => {
     fontWeight: 'bold',
     textShadow: '0 2px 4px rgba(0, 0, 0, 0.5)',
     zIndex: '-1',
-  };
+  }
 
   return (
     <>
@@ -202,21 +204,25 @@ const DesignCard: React.FC<DesignCardProps> = (props) => {
               style={gridImageStyle}
               onClick={openModal}
               onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'scale(1.02)';
-                e.currentTarget.style.filter = 'brightness(1.1)';
-                const overlay = e.currentTarget.querySelector('.image-overlay') as HTMLElement;
+                e.currentTarget.style.transform = 'scale(1.02)'
+                e.currentTarget.style.filter = 'brightness(1.1)'
+                const overlay = e.currentTarget.querySelector(
+                  '.image-overlay'
+                ) as HTMLElement
                 if (overlay) {
-                  overlay.style.opacity = '1';
-                  overlay.style.background = 'rgba(0, 0, 0, 0.3)';
+                  overlay.style.opacity = '1'
+                  overlay.style.background = 'rgba(0, 0, 0, 0.3)'
                 }
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'scale(1)';
-                e.currentTarget.style.filter = 'brightness(1)';
-                const overlay = e.currentTarget.querySelector('.image-overlay') as HTMLElement;
+                e.currentTarget.style.transform = 'scale(1)'
+                e.currentTarget.style.filter = 'brightness(1)'
+                const overlay = e.currentTarget.querySelector(
+                  '.image-overlay'
+                ) as HTMLElement
                 if (overlay) {
-                  overlay.style.opacity = '0';
-                  overlay.style.background = 'rgba(0, 0, 0, 0)';
+                  overlay.style.opacity = '0'
+                  overlay.style.background = 'rgba(0, 0, 0, 0)'
                 }
               }}
             >
@@ -225,9 +231,14 @@ const DesignCard: React.FC<DesignCardProps> = (props) => {
               </div>
             </div>
             <div className="grid--content p-4 shadow-2xl" style={{ zIndex: 1 }}>
-              <h1 className="card--title mb-4 text-4xl font-bold">{props.title}</h1>
+              <h1 className="card--title mb-4 text-4xl font-bold">
+                {props.title}
+              </h1>
               <p className="card--content leading-tight mb-4">{props.para}</p>
-              <button onClick={() => Router.push(`${props.figmaLink}`)} className="bg-transparent btn_button py-2 px-4">
+              <button
+                onClick={() => Router.push(`${props.figmaLink}`)}
+                className="bg-transparent btn_button py-2 px-4"
+              >
                 Visit Figma Design
               </button>
             </div>
@@ -259,12 +270,12 @@ const DesignCard: React.FC<DesignCardProps> = (props) => {
             style={closeButtonStyle}
             onClick={closeModal}
             onMouseEnter={(e) => {
-              e.currentTarget.style.background = 'rgba(255, 255, 255, 0.2)';
-              e.currentTarget.style.transform = 'scale(1.1)';
+              e.currentTarget.style.background = 'rgba(255, 255, 255, 0.2)'
+              e.currentTarget.style.transform = 'scale(1.1)'
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.background = 'rgba(0, 0, 0, 0.7)';
-              e.currentTarget.style.transform = 'scale(1)';
+              e.currentTarget.style.background = 'rgba(0, 0, 0, 0.7)'
+              e.currentTarget.style.transform = 'scale(1)'
             }}
           >
             ×
@@ -278,33 +289,31 @@ const DesignCard: React.FC<DesignCardProps> = (props) => {
               disabled={zoomLevel <= 0.5}
               onMouseEnter={(e) => {
                 if (zoomLevel > 0.5) {
-                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.3)';
-                  e.currentTarget.style.transform = 'scale(1.1)';
+                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.3)'
+                  e.currentTarget.style.transform = 'scale(1.1)'
                 }
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.2)';
-                e.currentTarget.style.transform = 'scale(1)';
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.2)'
+                e.currentTarget.style.transform = 'scale(1)'
               }}
             >
               −
             </button>
-            <div style={zoomInfoStyle}>
-              {Math.round(zoomLevel * 100)}%
-            </div>
+            <div style={zoomInfoStyle}>{Math.round(zoomLevel * 100)}%</div>
             <button
               style={zoomButtonStyle}
               onClick={handleZoomIn}
               disabled={zoomLevel >= 4}
               onMouseEnter={(e) => {
                 if (zoomLevel < 4) {
-                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.3)';
-                  e.currentTarget.style.transform = 'scale(1.1)';
+                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.3)'
+                  e.currentTarget.style.transform = 'scale(1.1)'
                 }
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.2)';
-                e.currentTarget.style.transform = 'scale(1)';
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.2)'
+                e.currentTarget.style.transform = 'scale(1)'
               }}
             >
               +
@@ -313,7 +322,7 @@ const DesignCard: React.FC<DesignCardProps> = (props) => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default DesignCard;
+export default DesignCard

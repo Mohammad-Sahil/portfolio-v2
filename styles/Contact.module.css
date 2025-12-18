@@ -3,17 +3,17 @@
   /* background-color: red; */
 }
 
-.contact_container>h2 {
+.contact_container > h2 {
   font-weight: 800;
   font-size: 30px;
   line-height: 36px;
-  color: #94A3B8;
+  color: #94a3b8;
   padding: 10px 3px 12px 3px;
   position: relative;
   background-color: #1e293b;
   margin: 0 -25px;
   padding-left: 27px;
-  border-bottom: 1px solid #38384A;
+  border-bottom: 1px solid #38384a;
   font-size: 24px;
 }
 
@@ -30,7 +30,7 @@
 .contact_container_div {
   width: 100%;
   background: linear-gradient(to bottom right, #1e293b, #0f172a);
-  border-radius: .75rem;
+  border-radius: 0.75rem;
   margin-top: 40px;
   padding-bottom: 35px;
 }
@@ -42,10 +42,12 @@
   background: linear-gradient(45deg, #ec4899, #8b5cf6, #ec4899, #8b5cf6);
   background-size: 400% 400%;
   border-radius: 0.5rem !important;
-  border: 2px solid #AA1EF1;
+  border: 2px solid #aa1ef1;
   font-weight: 500 !important;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
   animation: gradientRotate 3s ease-in-out infinite;
 }
 
@@ -67,7 +69,7 @@
 .contact_container_div textarea {
   /* background: linear-gradient(159deg, #252532 0%, #23232d 100%); */
   background-color: transparent;
-  color: #94A3B8;
+  color: #94a3b8;
   padding: 15px 15px 15px 65px;
   margin-top: 35px;
   border: 1.5px solid #1e293b;
@@ -79,18 +81,18 @@
 
 .contact_container_div input::placeholder,
 .contact_container_div textarea::placeholder {
-  color: #94A3B8;
+  color: #94a3b8;
 }
 
 .contact_container_div input:focus,
 .contact_container_div textarea:focus {
-  background-color: #0E1629;
+  background-color: #0e1629;
   box-shadow: none;
   color: white;
   border: 1.5px solid #1e293b;
 }
 
-.contact_container_div form>div {
+.contact_container_div form > div {
   position: relative;
 }
 
@@ -107,12 +109,12 @@
   background: #1e293b;
 }
 
-.contact_container_div input:focus~label {
-  background: linear-gradient(90deg, #DA6E82 0%, #A756E6 100%);
+.contact_container_div input:focus ~ label {
+  background: linear-gradient(90deg, #da6e82 0%, #a756e6 100%);
 }
 
-@media(max-width: 768px) {
-  .contact_container_div>form {
+@media (max-width: 768px) {
+  .contact_container_div > form {
     padding: 0.1px 15px !important;
   }
 }

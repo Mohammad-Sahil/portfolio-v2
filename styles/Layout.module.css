@@ -1,6 +1,6 @@
 .home_container {
   position: relative;
-  background-color: #0E1629;
+  background-color: #0e1629;
   background-image: url('../public/bgCenter.png');
   background-repeat: repeat;
   width: calc(100% - 380px);
@@ -25,7 +25,9 @@
   /* background: rgba(208, 0, 245, 0.7); */
   background: linear-gradient(45deg, #ec4899, #8b5cf6, #ec4899, #8b5cf6);
   background-size: 400% 400%;
-  transition: background 0.2s ease, background-size 0.2s ease;
+  transition:
+    background 0.2s ease,
+    background-size 0.2s ease;
 }
 
 .layout_margin {
@@ -41,7 +43,7 @@
   float: left;
   height: 300px;
   width: 65px;
-  background: #F5F5F5;
+  background: #f5f5f5;
   overflow-y: scroll;
   margin-bottom: 25px;
   position: absolute;
@@ -56,27 +58,27 @@
 .home_container::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 
 .home_container::-webkit-scrollbar {
   width: 12px;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 
 .home_container::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #555;
 }
 
-@media(max-width: 1280px) {
+@media (max-width: 1280px) {
   .layout_margin {
     width: auto;
   }
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .home_container {
     width: 100%;
   }
@@ -90,10 +92,10 @@
     display: flex;
     width: 100%;
     height: 70px;
-    background-color: #1E293B;
-    border-bottom: 1px solid #38384A;
+    background-color: #1e293b;
+    border-bottom: 1px solid #38384a;
     /* box-shadow: 0px 0px 8px rgb(0 0 0 / 30%); */
-    color: #9C9CA2;
+    color: #9c9ca2;
     align-items: center;
   }
 
@@ -127,5 +129,4 @@
       background-position: 0% 50%;
     }
   }
-
 }
