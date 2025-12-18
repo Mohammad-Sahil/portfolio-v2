@@ -52,7 +52,7 @@ const SplashScreen = ({ setShowSplash }) => {
 
           if (newCycleCount >= 1) {
             setTimeout(() => setShowSplash(false), 800)
-            return
+            return null;
           }
         }
 
