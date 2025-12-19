@@ -5,6 +5,7 @@ interface SplashScreenProps {
   setShowSplash: Dispatch<SetStateAction<boolean>>
 }
 
+
 const SplashScreen = ({ setShowSplash }) => {
   const skills = [
     'React/NextJS',
@@ -24,7 +25,7 @@ const SplashScreen = ({ setShowSplash }) => {
   }, [])
 
   useEffect(() => {
-    let timeoutId
+    let timeoutId: ReturnType<typeof setTimeout> | undefined
     const currentSkill = skills[currentSkillIndex]
 
     if (isTyping) {
@@ -51,8 +52,7 @@ const SplashScreen = ({ setShowSplash }) => {
           setCycleCount(newCycleCount)
 
           if (newCycleCount >= 1) {
-            setTimeout(() => setShowSplash(false), 800)
-            return null;
+            timeoutId = setTimeout(() => setShowSplash(false), 800)
           }
         }
 
@@ -61,8 +61,11 @@ const SplashScreen = ({ setShowSplash }) => {
       }
     }
 
-    return () => clearTimeout(timeoutId)
+    return () => {
+      if (timeoutId) clearTimeout(timeoutId)
+    }
   }, [currentText, isTyping, currentSkillIndex, skills, cycleCount])
+
 
   return (
     <>
