@@ -246,8 +246,10 @@ const SplashScreen = ({ setShowSplash }: SplashScreenProps) => {
           </code>
         </div>
       </div>
-      <style>{`
-        @keyframes blink {
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
+         @keyframes blink {
           0%, 100% { opacity: 1; }
           50% { opacity: 0; }
         }
@@ -304,7 +306,8 @@ const SplashScreen = ({ setShowSplash }: SplashScreenProps) => {
             50% { transform: translateY(-5px); }
           }
         }
-      `}</style>
+                    `
+        }} />
     </>
   )
 }
