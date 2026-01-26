@@ -50,7 +50,9 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <SEO />
       {isClient && showSplash ? (
-        <SplashScreen setShowSplash={setShowSplash} />
+        <SplashScreen
+          setShowSplash={setShowSplash}
+        />
       ) : (
         <Component {...pageProps} />
       )}
