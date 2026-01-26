@@ -11,6 +11,10 @@ import { collection, addDoc } from 'firebase/firestore'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Head from 'next/head'
+import emailjs from '@emailjs/browser'
+
+// Initialize EmailJS (call once on app load, preferably in your _app.tsx or _app.js)
+emailjs.init('hLeOSzIC3767vFN4U')
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -18,6 +22,8 @@ export default function Home() {
     email: '',
     message: '',
   })
+
+  const [isLoading, setIsLoading] = useState(false)
 
   interface FormData {
     name: string
@@ -44,16 +50,32 @@ export default function Home() {
     e: React.FormEvent<HTMLFormElement>
   ): Promise<void> => {
     e.preventDefault()
+    setIsLoading(true)
 
     try {
-      // Add timestamp to the data
+      // Prepare data with timestamp
       const dataToSubmit = {
         ...formData,
         timestamp: new Date(),
       }
 
-      // Add document to Firestore
-      await addDoc(collection(db, 'contactus'), dataToSubmit)
+      // Send to Firebase
+      const firestorePromise = addDoc(collection(db, 'contactus'), dataToSubmit)
+
+      // Send to EmailJS with template variables
+      const emailPromise = emailjs.send(
+        'service_stgug7u',
+        'template_npweby7',
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          time: new Date().toLocaleString(),
+        }
+      )
+
+      // Wait for both operations to complete
+      await Promise.all([firestorePromise, emailPromise])
 
       // Show success toast
       toast.success('Message sent successfully!', {
@@ -78,7 +100,9 @@ export default function Home() {
         draggable: true,
       })
 
-      console.error('Error adding document: ', error)
+      console.error('Error:', error)
+    } finally {
+      setIsLoading(false)
     }
   }
 
@@ -114,6 +138,7 @@ export default function Home() {
                       aria-describedby="nameHelp"
                       placeholder="Name"
                       required
+                      disabled={isLoading}
                     />
                   </div>
                   <div className="form-group">
@@ -129,6 +154,7 @@ export default function Home() {
                       aria-describedby="emailHelp"
                       placeholder="Email"
                       required
+                      disabled={isLoading}
                     />
                   </div>
                   <div className="form-group">
@@ -142,6 +168,7 @@ export default function Home() {
                       onChange={handleChange}
                       placeholder="Message"
                       required
+                      disabled={isLoading}
                     ></textarea>
                   </div>
                   <div className="form-group">
@@ -149,8 +176,9 @@ export default function Home() {
                       type="submit"
                       className={styles.contact_container_div_button}
                       variant="contained"
+                      disabled={isLoading}
                     >
-                      SEND MESSAGE
+                      {isLoading ? 'SENDING...' : 'SEND MESSAGE'}
                     </Button>
                   </div>
                 </form>

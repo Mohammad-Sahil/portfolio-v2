@@ -33,10 +33,10 @@ const Sidebar = ({ display }) => {
             </span>
           </h1>
           {/* <p>Full Stack Web Developer<br />Cloud Enthusiast</p> */}
-          <p>
-            Flutter & Web App Innovator
+          <p style={{ color: '#fff', fontWeight: '800', }}>
+            <span className='role-badge'>Full-Stack Developer</span>
             <br />
-            Cloud & AI Enthusiast
+            <span style={{ color: '#22c55e', fontWeight: '400' }}>Next.js</span> · <span style={{ color: '#06b6d4', fontWeight: '400' }}>Node.js</span> · <span style={{ color: '#fbbf24', fontWeight: '400' }}>TypeScript</span> · <span style={{ color: '#d946ef', fontWeight: '400' }}>AWS</span>
           </p>
         </div>
       </div>
@@ -57,29 +57,29 @@ const Sidebar = ({ display }) => {
       <div className={styles.sidebar_lang}>
         <div className={styles.sidebar_lang_progress}>
           <div className="row">
-            <div className="col-4">
+            <div className="col-4 first-ring">
               <CircularProgressbar
                 value={percentageOne}
                 text={`${percentageOne}%`}
               />
               <br />
-              <p>English</p>
+              <p>EN</p>
             </div>
-            <div className="col-4">
+            <div className="col-4 second-ring">
               <CircularProgressbar
                 value={percentageTwo}
                 text={`${percentageTwo}%`}
               />
               <br />
-              <p>Hindi</p>
+              <p>HI</p>
             </div>
-            <div className="col-4">
+            <div className="col-4 third-ring">
               <CircularProgressbar
                 value={percentageThree}
                 text={`${percentageThree}%`}
               />
               <br />
-              <p>Spanish</p>
+              <p>ES</p>
             </div>
           </div>
         </div>

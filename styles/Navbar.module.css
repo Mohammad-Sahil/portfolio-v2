@@ -67,6 +67,7 @@
     right: 0;
     /* width: 70px; */
     height: calc(100vh - 70px);
+    z-index: 999 !important;
     /* display: none !important; */
   }
 }

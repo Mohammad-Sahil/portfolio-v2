@@ -25,7 +25,7 @@ const projectsArray = [
     title: 'Vriddhi eSports Fest Website',
     para: 'Built and designed a fully functional highly responsive web app for the official eSports Fest of NIT Rourkela from scratch using Next.js,MUI, Emotion, Node.js, MongoDB and Vercel.',
     githubLink: 'https://github.com/Vriddhi2021/frontend/',
-    liveLink: 'https://www.vriddhinitr.com/',
+    liveLink: 'https://vriddhi.vercel.app/',
     tag1: 'NextJS',
     tag2: 'MUI',
     tag3: 'Emotion',
