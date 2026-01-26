@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '../styles/Sidebar.module.css'
-import profileImg from '../public/profilee.png'
+import profileImg from '../public/profile.jpg'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import GitHubIcon from '@mui/icons-material/GitHub'
