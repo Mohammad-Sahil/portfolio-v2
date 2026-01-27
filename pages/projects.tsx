@@ -37,8 +37,9 @@ export default function Home() {
               style={{ marginBottom: '1rem' }}
             >
               <div className="row w-100 align-items-center">
-                <div className="col-12 col-md-6 text-start">
-                  <h2 className="page_title mb-md-0">Featured Projects</h2>
+                <div className="col-12 col-md-6 text-start py-3">
+                  <h2 className="page_title mb-md-0" style={{ color: "#fff" }}>Featured Projects</h2>
+                  <p className="m-0 p-0" style={{ fontSize: '16px', fontWeight: '400', color: '#94a3b8' }}>What I've Shipped to Production</p>
                 </div>
                 <div className="col-12 col-md-6 text-md-end px-0">
                   <div

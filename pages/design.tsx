@@ -29,7 +29,7 @@ export default function Home() {
           style={{ marginTop: '0' }}
         >
           <div className={styles.session_container}>
-            <h2>Featured Designs</h2>
+            <h2><span style={{ color: "#fff" }}>Featured Designs</span><br /><span style={{ fontSize: '16px', fontWeight: '400' }}>Curated Graphic Design Projects</span></h2>
 
             <DesignC
               title1="CodeHub Logo"

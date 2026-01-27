@@ -5,11 +5,10 @@
 .project_container h2 {
   font-weight: 800;
   font-size: 30px;
-  line-height: 36px;
+  line-height: 0.9;
   color: #94a3b8;
-  padding: 10px 3px 12px 3px;
+  padding: 10px 3px 6px 0px;
   position: relative;
-  font-size: 24px;
 }
 
 .project_container .project_header {
@@ -28,7 +27,7 @@
   /* background-color: rgba(255, 0, 0, 0.236); */
 }
 
-.project_macframe > img {
+.project_macframe>img {
   width: 100%;
 }
 
@@ -118,7 +117,7 @@
 }
 
 @media (max-width: 768px) {
-  .project_macframe > img {
+  .project_macframe>img {
     display: none;
   }
 

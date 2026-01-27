@@ -29,7 +29,7 @@ export default function Home() {
           style={{ marginTop: '0' }}
         >
           <div className={styles.session_container}>
-            <h2>Featured Art Space of Ui/UX</h2>
+            <h2><span style={{ color: "#fff" }}>Featured Art Space of Ui/UX</span><br /><span style={{ fontSize: '16px', fontWeight: '400' }}>Thoughtful interfaces built for real users</span></h2>
 
             <DesignCard
               cardImg={vriddhi.src}

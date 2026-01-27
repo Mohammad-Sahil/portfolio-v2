@@ -3,18 +3,17 @@
   /* background-color: red; */
 }
 
-.contact_container > h2 {
+.contact_container>h2 {
   font-weight: 800;
   font-size: 30px;
-  line-height: 36px;
+  line-height: 0.9;
   color: #94a3b8;
-  padding: 10px 3px 12px 3px;
+  padding: 20px 3px 22px 3px;
   position: relative;
   background-color: #1e293b;
   margin: 0 -25px;
   padding-left: 27px;
   border-bottom: 1px solid #38384a;
-  font-size: 24px;
 }
 
 /* .contact_container>h2::after {
@@ -92,7 +91,7 @@
   border: 1.5px solid #1e293b;
 }
 
-.contact_container_div form > div {
+.contact_container_div form>div {
   position: relative;
 }
 
@@ -109,12 +108,12 @@
   background: #1e293b;
 }
 
-.contact_container_div input:focus ~ label {
+.contact_container_div input:focus~label {
   background: linear-gradient(90deg, #da6e82 0%, #a756e6 100%);
 }
 
 @media (max-width: 768px) {
-  .contact_container_div > form {
+  .contact_container_div>form {
     padding: 0.1px 15px !important;
   }
 }

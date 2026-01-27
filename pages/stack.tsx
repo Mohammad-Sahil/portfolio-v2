@@ -20,7 +20,7 @@ export default function Home() {
           style={{ marginTop: '0' }}
         >
           <div className={styles.stack_container}>
-            <h2>Tech Stacks</h2>
+            <h2><span style={{ color: "#fff" }}>Tech Stacks</span><br /><span style={{ fontSize: '16px', fontWeight: '400' }}>The Tools Behind My Work</span></h2>
             <div className={styles.stack_container_div}>
               <h4>GENERAL PROGRAMMING</h4>
               <div className="row">

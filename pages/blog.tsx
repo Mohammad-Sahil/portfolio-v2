@@ -24,7 +24,7 @@ export default function Home() {
           style={{ marginTop: '0' }}
         >
           <div className={styles.blog_container}>
-            <h2>Latest Blogs</h2>
+            <h2><span style={{ color: "#fff" }}>Latest Blogs</span><br /><span style={{ fontSize: '16px', fontWeight: '400' }}>Writing About Code & Craft</span></h2>
             <div className="blog_container_blog">
               <div className="row mx-auto my-4">
                 <Blog

@@ -2,18 +2,17 @@
   width: 100%;
 }
 
-.por_container > h2 {
+.por_container>h2 {
   font-weight: 800;
   font-size: 30px;
-  line-height: 36px;
+  line-height: 0.9;
   color: #94a3b8;
-  padding: 10px 3px 12px 3px;
+  padding: 20px 3px 22px 3px;
   position: relative;
   background-color: #1e293b;
   margin: 0 -25px;
   padding-left: 27px;
   border-bottom: 1px solid #38384a;
-  font-size: 24px;
 }
 
 /* .por_container>h2::after {
@@ -67,7 +66,7 @@
   color: #94a3b8;
 }
 
-.por_container_div > h4 {
+.por_container_div>h4 {
   color: #ffff;
   font-size: 20px;
   margin-bottom: -6px;

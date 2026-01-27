@@ -29,7 +29,9 @@ export default function Home() {
           style={{ marginTop: '0' }}
         >
           <div className={styles.por_container}>
-            <h2>Position of Responsibility</h2>
+
+            <h2><span style={{ color: "#fff" }}>Position of Responsibility</span><br /><span style={{ fontSize: '16px', fontWeight: '400' }}>Leading & Owning Outcomes</span></h2>
+
             <div className={styles.por_container_div}>
               {/* <h4>GENERAL PROGRAMMING</h4> */}
               <div className="row">

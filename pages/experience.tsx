@@ -20,7 +20,8 @@ export default function Experience() {
           style={{ marginTop: '0' }}
         >
           <div className={styles.session_container}>
-            <h2>Work Experience</h2>
+            <h2><span style={{ color: "#fff" }}>Work Experience</span><br /><span style={{ fontSize: '16px', fontWeight: '400' }}>Engineering Impact Across Products</span></h2>
+
             <WorkExperience />
             <div className="home_footer">
               <p>
