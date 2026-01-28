@@ -77,12 +77,7 @@ export default function Home() {
                   para={item.para}
                   githubLink={item.githubLink}
                   liveLink={item.liveLink}
-                  tag1={item.tag1}
-                  tag2={item.tag2}
-                  tag3={item.tag3}
-                  tag4={item.tag4}
-                  tag5={item.tag5}
-                  tag6={item.tag6}
+                  tags={[item.tag1, item.tag2, item.tag3, item.tag4, item.tag5, item.tag6]}
                   projectImg={item.projectImg}
                 />
               )
