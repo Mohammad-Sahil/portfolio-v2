@@ -12,7 +12,7 @@ const WorkExperienceArray = [
     title: 'Contractor',
     company: 'Focus On Concepts',
     link: 'https://focusonconcepts.com/',
-    date: 'Nov 2024 — Jan 2025',
+    date: 'Nov 2025 — Jan 2026',
 
     skills: [
       { name: 'Next.js', color: '#fbbf24' },
